@@ -39,6 +39,9 @@ rm lsd_0.20.1_amd64.deb
 add_alias ls "lsd" "Replacement for ls"
 add_alias la "lsd -la" "Replacement for ls -la"
 
+# Uncommenting DISABLE_LS_COLORS="true" in zshrc due to oh my zsh making their own ls aliases
+sed -i -e "s/^# DISABLE_LS_COLORS/DISABLE_LS_COLORS/g" -e "s/^#DISABLE_LS_COLORS/DISABLE_LS_COLORS/g" ~/.zshrc
+
 # Add common shortcuts to .zshrc
 add_alias repo "cd /mnt/c/Users/cheec/Documents/Repo" "Alias to repo folder"
 add_alias desktop "cd /mnt/c/Users/cheec" "Alias to desktop"
